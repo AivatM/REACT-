@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; //Чтобы заработал JSX
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';

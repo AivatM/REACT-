@@ -1,5 +1,7 @@
-import React from 'react';
+import React from 'react'; //Чтобы заработал JSX
 import './App.css';
+import Header from './Header'; //Подключили к файлу App.js компонетну Header
+import Technology from './Technology';//Подключили к файлу App.js компонетну Technology
 
 const App = (props) => {
   return (
@@ -9,20 +11,4 @@ const App = (props) => {
     </div>
   );
 }
-const Header = (props) => {
-  return (
-    <h1>ЗДЕСЬ БУДЕТ ШАПКА САЙТА</h1>
-  );
-}
-const Technology = (props) => {
-  return (
-    <ul>
-        <li>html</li>
-        <li>css</li>
-        <li>js</li>
-        <li>react</li>
-    </ul>
-  );
-}
-
 export default App;

@@ -1,0 +1,67 @@
+.profile {
+    
+    width: 100%;
+    height: 100vh;
+    padding: 15px;
+}
+.profile__bg-wrapper {
+    
+}
+.profile__bg-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+.profile__card{
+    display: flex;
+    background-color: #fff;
+    padding: 10px;
+} 
+.card{}
+.card__photo-wrapper{
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+}
+.card__photo-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.card__text{
+    font-size: 14px;
+}
+.card__name{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.card__city{}
+.card__education{}
+.card__web{}
+
+.profile__posts{
+    background-color: #fff;
+    padding: 10px;
+} 
+.posts{}
+.posts__new{
+    
+}
+.posts__window{
+    width: 100%;
+    resize:none;
+    display: block;
+    height: 80px;
+}
+.posts__btn{
+    padding: 5px 20px;
+    margin-top: 10px;
+    background-color:  #485992;
+    color: #fff;
+    border:none;
+    display: inline-block;
+}

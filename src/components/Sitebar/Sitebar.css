@@ -1,23 +1,28 @@
 .sitebar {
-    flex: 0 0 15%;
+    flex: 0 1 15%;
     padding: 0 10px;
 }
+
 .menu {}
-.menu__list{
+
+.menu__list {
     margin: 0;
     padding: 0;
     text-align: center;
 }
-.menu__item{
+
+.menu__item {
     list-style-type: none;
     padding: 5px 10px;
     margin-bottom: 6px;
 }
+
 .menu__item:last-child {
     margin-top: 60px;
     margin-bottom: 0;
 }
-.menu__link{
+
+.menu__link {
     text-decoration: none;
     color: #485992;
     padding: 5px 10px;

@@ -11,9 +11,9 @@ const MyPosts = (props) => {
                 <button className="posts__btn">Добавить запись</button>
             </div>
             <div className="posts__list">
-               <PostsItem/> 
-               <PostsItem/> 
-               <PostsItem/> 
+               <PostsItem message='Всем привет' likeCount='20'/> 
+               <PostsItem message='Сегодня хорошая погода' likeCount='66'/> 
+               <PostsItem message='Люблю добиваться своих целей' likeCount='33'/> 
             </div>
         </div>
     );

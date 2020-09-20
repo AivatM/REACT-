@@ -1,0 +1,53 @@
+.dialogs {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.dialogs__header {
+    margin: 0;
+}
+
+.dialogs__people {
+    flex: 0 1 50%;
+}
+
+.dialogs__people-item {
+    margin-top: 20px;
+    padding: 5px 0;
+
+}
+
+.people-item {}
+
+.people-item__name {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    padding: 5px 15px;
+}
+
+.dialogs__messages {
+    flex: 0 1 50%;
+}
+
+.dialogs__messages-window {
+    width: 100%;
+    resize: none;
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    
+}
+
+.dialogs__messages-button {
+    padding: 5px 20px;
+    margin-top: 10px;
+    background-color: #485992;
+    color: #fff;
+    border: none;
+    display: block;
+    margin-left: auto;
+}

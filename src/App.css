@@ -1,5 +1,6 @@
 .app-wrapper {
     background-color: #EEEEEE;
+    box-sizing: border-box;
 }
 
 .container {

@@ -1,0 +1,31 @@
+.posts__item {
+    margin-top: 20px;
+}
+
+.posts__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+}
+
+.posts__text {
+    padding: 0 15px;
+}
+.posts__like{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    align-items: center;
+}
+.posts__like-link{}
+.posts__like-img{
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+.posts__like-number{
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+}

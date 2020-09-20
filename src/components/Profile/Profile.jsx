@@ -2,6 +2,7 @@ import React from 'react';
 import './Profile.css';
 import profileBg from '../../images/profileBg.jpg';
 import profilePhoto from '../../images/profilePhoto.jpg';
+import MyPosts from './MyPosts/MyPosts';
 
 const Profile = (props) => {
   return (
@@ -23,16 +24,10 @@ const Profile = (props) => {
           <div className="card__education">
             Казансий Федеральный Университет
                 </div>
-          <a href="#" className="card__web"> Мой сайт</a>
+          <a href="s#" className="card__web"> Мой сайт</a>
         </div>
       </div>
-      <div className="profile__posts posts">
-        <h3>Мои записи</h3>
-        <div className="posts__new">
-          <textarea className="posts__window" placeholder="Добавьте запись, Напишите о чем думаете?"></textarea>
-          <button className="posts__btn">Добавить запись</button>
-        </div>
-      </div>
+      <MyPosts/>
     </main>
   );
 }

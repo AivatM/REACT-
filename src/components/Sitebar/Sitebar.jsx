@@ -1,5 +1,6 @@
 import React from 'react';
 import './Sitebar.css';
+import {NavLink} from 'react-router-dom';
 
 const Sitebar = (props) => {
     return (
@@ -7,16 +8,16 @@ const Sitebar = (props) => {
             <nav className="menu">
                 <ul className="menu__list">
                     <li className="menu__item">
-                        <a href="/profile" className="menu__link">Профиль</a>
+                        <NavLink to="/profile" className="menu__link">Профиль</NavLink>
                     </li>
                     <li className="menu__item">
-                        <a href="/dialogs" className="menu__link">Сообщения</a>
+                        <NavLink to="/dialogs" className="menu__link">Сообщения</NavLink>
                     </li>
                     <li className="menu__item">
-                        <a href="/news" className="menu__link">Новости</a>
+                        <NavLink to="/news" className="menu__link">Новости</NavLink>
                     </li>
                     <li className="menu__item">
-                        <a href="/music" className="menu__link">Музыка</a>
+                        <NavLink to="/music" className="menu__link">Музыка</NavLink>
                     </li>
                     <li className="menu__item">
                         <a href="#" className="menu__link">Настройки</a>

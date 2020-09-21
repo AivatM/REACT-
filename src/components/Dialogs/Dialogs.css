@@ -16,7 +16,6 @@
 .dialogs__people-item {
     margin-top: 20px;
     padding: 5px 0;
-
 }
 
 .people-item {}
@@ -26,6 +25,10 @@
     color: #000;
     font-size: 16px;
     padding: 5px 15px;
+}
+
+.people-item__name:hover {
+    background-color: #eee;
 }
 
 .dialogs__messages {
@@ -39,7 +42,7 @@
     padding: 10px;
     box-sizing: border-box;
     margin-top: 20px;
-    
+
 }
 
 .dialogs__messages-button {

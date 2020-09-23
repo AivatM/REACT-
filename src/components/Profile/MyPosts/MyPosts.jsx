@@ -7,7 +7,11 @@ const MyPosts = (props) => {
         { id: 1, message: 'Всем привет', likeCount: '20' },
         { id: 2, message: 'Сегодня хорошая погода', likeCount: '66' },
         { id: 3, message: 'Люблю добиваться своих целей', likeCount: '33' },
+        { id: 4, message: 'хз', likeCount: '75' },
+        { id: 5, message: 'Мысли вслух', likeCount: '32' },
+        { id: 6, message: 'Любите', likeCount: '39' },
     ];
+    let postsDataList = postsData.map(messageAndLikes => <PostsItem message={messageAndLikes.message} likeCount={messageAndLikes.likeCount}/>)
     return (
         <div className="profile__posts posts">
             <h3>Мои записи</h3>
@@ -16,9 +20,7 @@ const MyPosts = (props) => {
                 <button className="posts__btn">Добавить запись</button>
             </div>
             <div className="posts__list">
-                <PostsItem message={postsData[0].message} likeCount={postsData[0].likeCount} />
-                <PostsItem message={postsData[1].message} likeCount={postsData[1].likeCount} />
-                <PostsItem message={postsData[2].message} likeCount={postsData[2].likeCount} />
+                {postsDataList}
             </div>
         </div>
     );

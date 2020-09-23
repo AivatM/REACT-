@@ -27,6 +27,8 @@ const Dialogs = (props) => {
         { id: 3, message: 'все нормально' },
     ];
 
+    let dialogsPeopleDataList = dialogsPeopleData.map(people => <DialogsPeopleItem name={people.name} id={people.id}/>);
+    let dialogsMessagesDataList = dialogsMessagesData.map(message => <DialogsMessagesItem message={message.message}/>);
     return (
         <main className="dialogs">
             <h3 className="dialogs__header">
@@ -34,14 +36,20 @@ const Dialogs = (props) => {
             </h3>
             <div className="flex">
                 <div className="dialogs__people">
-                    <DialogsPeopleItem name={dialogsPeopleData[0].name} id={dialogsPeopleData[0].id} />
+                    
+                    {dialogsPeopleDataList}
+                    
+                
+
+                    {/* <DialogsPeopleItem name={dialogsPeopleData[0].name} id={dialogsPeopleData[0].id} />
                     <DialogsPeopleItem name={dialogsPeopleData[1].name} id={dialogsPeopleData[1].id} />
-                    <DialogsPeopleItem name={dialogsPeopleData[2].name} id={dialogsPeopleData[2].id} />
+                    <DialogsPeopleItem name={dialogsPeopleData[2].name} id={dialogsPeopleData[2].id} /> */}
                 </div>
                 <div className="dialogs__messages dialogs-messages">
-                    <DialogsMessagesItem message={dialogsMessagesData[0].message} />
+                    {dialogsMessagesDataList}
+                    {/* <DialogsMessagesItem message={dialogsMessagesData[0].message} />
                     <DialogsMessagesItem message={dialogsMessagesData[1].message} />
-                    <DialogsMessagesItem message={dialogsMessagesData[2].message} />
+                    <DialogsMessagesItem message={dialogsMessagesData[2].message} /> */}
                     <textarea className="dialogs__messages-window"></textarea>
                     <button className="dialogs__messages-button">Отправить сообщение</button>
                 </div>

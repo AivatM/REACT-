@@ -4,8 +4,8 @@ import DialogsMessagesItem from './DialogsMessagesItem/DialogsMessagesItem';
 import DialogsPeopleItem from './DialogsPeopleItem/DialogsPeopleItem';
 
 const Dialogs = (props) => {
-    let dialogsPeopleDataList = props.dialogsPeopleData.map(people => <DialogsPeopleItem name={people.name} id={people.id} />);
-    let dialogsMessagesDataList = props.dialogsMessagesData.map(message => <DialogsMessagesItem message={message.message} />);
+    let dialogsPeopleDataList = props.state.dialogsPeopleData.map(people => <DialogsPeopleItem name={people.name} id={people.id} />);
+    let dialogsMessagesDataList = props.state.dialogsMessagesData.map(message => <DialogsMessagesItem message={message.message} />);
     return (
         <main className="dialogs">
             <h3 className="dialogs__header">

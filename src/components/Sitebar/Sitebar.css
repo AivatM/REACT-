@@ -31,3 +31,9 @@
 .menu__item:hover {
     background-color: #fff;
 }
+
+.important_friends{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}

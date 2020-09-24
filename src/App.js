@@ -18,11 +18,9 @@ const App = (props) => {
         <Header />
         <div className="container">
           <div className="flex">
-            <Sitebar />
-            <Route path="/profile" render={() => <Profile postsData={props.postsData}/>} />
-            <Route path="/dialogs" render={() => <Dialogs 
-            dialogsPeopleData={props.dialogsPeopleData} 
-            dialogsMessagesData={props.dialogsMessagesData}/>} />
+            <Sitebar state={props.state.sitebar}/>
+            <Route path="/profile" render={() => <Profile state={props.state.profilePage}/>} />
+            <Route path="/dialogs" render={() => <Dialogs state={props.state.dialogsPage}/>} />
             <Route path="/news" render={() => <News/>} />
             <Route path="/music" render={() => <Music/>} />
           </div>

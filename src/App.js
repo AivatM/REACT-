@@ -19,10 +19,12 @@ const App = (props) => {
         <div className="container">
           <div className="flex">
             <Sitebar />
-            <Route path="/profile" component={Profile} />
-            <Route path="/dialogs" component={Dialogs} />
-            <Route path="/news" component={News} />
-            <Route path="/music" component={Music} />
+            <Route path="/profile" render={() => <Profile postsData={props.postsData}/>} />
+            <Route path="/dialogs" render={() => <Dialogs 
+            dialogsPeopleData={props.dialogsPeopleData} 
+            dialogsMessagesData={props.dialogsMessagesData}/>} />
+            <Route path="/news" render={() => <News/>} />
+            <Route path="/music" render={() => <Music/>} />
           </div>
         </div>
         </div>

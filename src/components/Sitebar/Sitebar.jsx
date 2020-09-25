@@ -21,14 +21,15 @@ const Sitebar = (props) => {
                     <li className="menu__item">
                         <NavLink to="/music" className="menu__link">Музыка</NavLink>
                     </li>
+                    
                     <li className="menu__item">
-                        <NavLink to="/music" className="menu__link">Друзья</NavLink>
+                        <a href="#" className="menu__link">Настройки</a>
+                    </li>
+                    <li className="menu__item">
+                        <NavLink to="/music" className="menu__link">ДРУЗЬЯ</NavLink>
                         <div className="important_friends">
                             {importantFriendsDataList}
                         </div>
-                    </li>
-                    <li className="menu__item">
-                        <a href="#" className="menu__link">Настройки</a>
                     </li>
                 </ul>
             </nav>

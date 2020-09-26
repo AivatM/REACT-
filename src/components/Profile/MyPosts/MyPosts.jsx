@@ -6,8 +6,9 @@ const MyPosts = (props) => {
     let postsDataList = props.state.map(messageAndLikes => <PostsItem message={messageAndLikes.message} likeCount={messageAndLikes.likeCount}/>)
     let newPostElement = React.createRef();
     let addPost = () => {
+        debugger;
         let text = newPostElement.current.value;
-        alert(text);
+        props.addPost(text);
     }
     return (
         <div className="profile__posts posts">

@@ -32,13 +32,19 @@ let store = {
             ]
         }
     },
-    getState() {
-        return this._state;
-    },
     _rerenderEntireTree() {
         console.log('dd');
     },
-    addPost() {
+
+    getState() {
+        return this._state;
+    },
+    subcribe(observer) {
+        this._rerenderEntireTree = observer;
+    },
+
+    dispatch(action) {
+    if(action.type === 'ADD-POST') {
         let newPost = {
             id: 7, 
             message: this._state.profilePage.newPostText, 
@@ -46,14 +52,11 @@ let store = {
         }
         this._state.profilePage.postsData.push(newPost);
         this._rerenderEntireTree(this._state);
-    },
-    updatePostText(text) {
-        this._state.profilePage.newPostText = text;
+    } else if(action.type === 'UPDATE-POST-TEXT') {
+        this._state.profilePage.newPostText = action.text;
         this._rerenderEntireTree(this._state);
-    },
-    subcribe(observer) {
-        this._rerenderEntireTree = observer;
-    },
+    }
+    }
 }
 
 export default store;

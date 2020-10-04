@@ -1,7 +1,7 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
-const SEND_MESSAGE = 'SEND-MESSAGE';
-const UPDATE_MESSAGE_TEXT = 'UPDATE-MESSAGE-TEXT';
+import profileReducer from './profile-reducer'; 
+import dialogsReducer from './dialogs-reducer'; 
+import sitebarReducer from './sitebar-reducer'; 
+
 let store = {
     _state:{
         profilePage:{
@@ -49,40 +49,13 @@ let store = {
     },
 
     dispatch(action) {
-    if(action.type === ADD_POST) {
-        let newPost = {
-            id: 7, 
-            message: this._state.profilePage.newPostText, 
-            likeCount: '20',
-        }
-        this._state.profilePage.postsData.push(newPost);
-        this._state.profilePage.newPostText = '';
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+        this._state.sitebar = sitebarReducer(this._state.sitebar, action);
         this._rerenderEntireTree(this._state);
-    } else if(action.type === UPDATE_POST_TEXT) {
-        this._state.profilePage.newPostText = action.text;
-        this._rerenderEntireTree(this._state);
-    } else if(action.type === SEND_MESSAGE)  {
-        let text = this._state.dialogsPage.newMessage;
-        this._state.dialogsPage.newMessage = '';
-        this._state.dialogsPage.dialogsMessagesData.push({id: 4, message: text})
-        this._rerenderEntireTree(this._state);
-    } else if(action.type === UPDATE_MESSAGE_TEXT) {
-        this._state.dialogsPage.newMessage = action.text;
-        this._rerenderEntireTree(this._state);
-    }
     }
 }
-export const addPostActionCreator = () => {
-    return {type: ADD_POST};
- }
-export const updatePostTextActionCreator = (text) => {
-    return {type: UPDATE_POST_TEXT, text: text}
- }
-export const sendMessageCreator = () => {
-    return {type: SEND_MESSAGE};
- }
-export const updateMessageCreator = (text) => {
-    return {type: UPDATE_MESSAGE_TEXT, text: text}
- }
+
+
 
 export default store;

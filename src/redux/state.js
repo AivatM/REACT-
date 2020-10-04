@@ -1,5 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
+const SEND_MESSAGE = 'SEND-MESSAGE';
+const UPDATE_MESSAGE_TEXT = 'UPDATE-MESSAGE-TEXT';
 let store = {
     _state:{
         profilePage:{
@@ -24,6 +26,7 @@ let store = {
                 { id: 2, message: 'Как дела' },
                 { id: 3, message: 'все нормально' },
             ],
+            newMessage:''
         },
         sitebar: {
             importantFriendsData:[
@@ -58,6 +61,14 @@ let store = {
     } else if(action.type === UPDATE_POST_TEXT) {
         this._state.profilePage.newPostText = action.text;
         this._rerenderEntireTree(this._state);
+    } else if(action.type === SEND_MESSAGE)  {
+        let text = this._state.dialogsPage.newMessage;
+        this._state.dialogsPage.newMessage = '';
+        this._state.dialogsPage.dialogsMessagesData.push({id: 4, message: text})
+        this._rerenderEntireTree(this._state);
+    } else if(action.type === UPDATE_MESSAGE_TEXT) {
+        this._state.dialogsPage.newMessage = action.text;
+        this._rerenderEntireTree(this._state);
     }
     }
 }
@@ -67,6 +78,11 @@ export const addPostActionCreator = () => {
 export const updatePostTextActionCreator = (text) => {
     return {type: UPDATE_POST_TEXT, text: text}
  }
+export const sendMessageCreator = () => {
+    return {type: SEND_MESSAGE};
+ }
+export const updateMessageCreator = (text) => {
+    return {type: UPDATE_MESSAGE_TEXT, text: text}
+ }
 
 export default store;
-window.store = store;

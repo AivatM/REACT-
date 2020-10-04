@@ -2,10 +2,19 @@ import React from 'react';
 import './Dialogs.css';
 import DialogsMessagesItem from './DialogsMessagesItem/DialogsMessagesItem';
 import DialogsPeopleItem from './DialogsPeopleItem/DialogsPeopleItem';
+import {sendMessageCreator, updateMessageCreator} from './../../redux/state';
 
 const Dialogs = (props) => {
-    let dialogsPeopleDataList = props.state.dialogsPeopleData.map(people => <DialogsPeopleItem name={people.name} id={people.id} />);
-    let dialogsMessagesDataList = props.state.dialogsMessagesData.map(message => <DialogsMessagesItem message={message.message} />);
+    let state = props.store._state.dialogsPage;
+    let dialogsPeopleDataList = state.dialogsPeopleData.map(people => <DialogsPeopleItem name={people.name} id={people.id} />);
+    let dialogsMessagesDataList = state.dialogsMessagesData.map(message => <DialogsMessagesItem message={message.message} />);
+    let onMessageChange = (e) => {
+        let text = e.target.value;
+        props.store.dispatch(updateMessageCreator(text))
+    }
+    let sendMessage = () => {
+        props.store.dispatch(sendMessageCreator());
+    }
     return (
         <main className="dialogs">
             <h3 className="dialogs__header">
@@ -17,8 +26,8 @@ const Dialogs = (props) => {
                 </div>
                 <div className="dialogs__messages dialogs-messages">
                     {dialogsMessagesDataList}
-                    <textarea className="dialogs__messages-window"></textarea>
-                    <button className="dialogs__messages-button">Отправить сообщение</button>
+                    <textarea onChange={onMessageChange} value={state.newMessage} className="dialogs__messages-window"></textarea>
+                    <button onClick={sendMessage} className="dialogs__messages-button">Отправить сообщение</button>
                 </div>
             </div>
         </main>

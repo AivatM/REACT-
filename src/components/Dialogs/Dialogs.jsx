@@ -2,19 +2,18 @@ import React from 'react';
 import './Dialogs.css';
 import DialogsMessagesItem from './DialogsMessagesItem/DialogsMessagesItem';
 import DialogsPeopleItem from './DialogsPeopleItem/DialogsPeopleItem';
-import {sendMessageCreator, updateMessageCreator} from './../../redux/dialogs-reducer';
 
 const Dialogs = (props) => {
     debugger;
-    let state = props.store.getState().dialogsPage;
+    let state = props.dialogsPage;
     let dialogsPeopleDataList = state.dialogsPeopleData.map(people => <DialogsPeopleItem name={people.name} id={people.id} />);
     let dialogsMessagesDataList = state.dialogsMessagesData.map(message => <DialogsMessagesItem message={message.message} />);
     let onMessageChange = (e) => {
         let text = e.target.value;
-        props.store.dispatch(updateMessageCreator(text))
+        props.updateMessage(text);
     }
     let sendMessage = () => {
-        props.store.dispatch(sendMessageCreator());
+        props.sendMessage();
     }
     return (
         <main className="dialogs">

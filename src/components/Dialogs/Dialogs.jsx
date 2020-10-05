@@ -5,7 +5,8 @@ import DialogsPeopleItem from './DialogsPeopleItem/DialogsPeopleItem';
 import {sendMessageCreator, updateMessageCreator} from './../../redux/dialogs-reducer';
 
 const Dialogs = (props) => {
-    let state = props.store._state.dialogsPage;
+    debugger;
+    let state = props.store.getState().dialogsPage;
     let dialogsPeopleDataList = state.dialogsPeopleData.map(people => <DialogsPeopleItem name={people.name} id={people.id} />);
     let dialogsMessagesDataList = state.dialogsMessagesData.map(message => <DialogsMessagesItem message={message.message} />);
     let onMessageChange = (e) => {

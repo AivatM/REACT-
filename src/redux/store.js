@@ -44,7 +44,7 @@ let store = {
     getState() {
         return this._state;
     },
-    subcribe(observer) {
+    subscribe(observer) {
         this._rerenderEntireTree = observer;
     },
 

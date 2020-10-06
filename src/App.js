@@ -17,9 +17,9 @@ const App = (props) => {
         <Header />
         <div className="container">
           <div className="flex">
-            <Sitebar state={props.state.sitebar}/>
-            <Route path="/profile" render={() => <Profile store={props.store}/>}/>
-            <Route path="/dialogs" render={() => <DialogsContainer store={props.store}/>} />
+            <Sitebar/>  
+            <Route path="/profile" render={() => <Profile/>}/>
+            <Route path="/dialogs" render={() => <DialogsContainer/>} />
             <Route path="/news" render={() => <News/>} />
             <Route path="/music" render={() => <Music/>} />
           </div>

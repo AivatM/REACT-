@@ -29,12 +29,6 @@ let store = {
             newMessage:''
         },
         sitebar: {
-            importantFriendsData:[
-                { id: 1, name: 'Костя' },
-                { id: 2, name: 'Мира' },
-                { id: 3, name: 'Лика' },
-                { id: 3, name: 'Лика' },
-            ]
         }
     },
     _rerenderEntireTree() {

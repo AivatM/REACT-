@@ -1,11 +1,4 @@
-let initialState = {
-    importantFriendsData:[
-        { id: 1, name: 'Костя' },
-        { id: 2, name: 'Мира' },
-        { id: 3, name: 'Лика' },
-        { id: 3, name: 'Лика' },
-    ]
-};
+let initialState = {};
 export const sitebarReducer = (state = initialState, action) => {
 
     

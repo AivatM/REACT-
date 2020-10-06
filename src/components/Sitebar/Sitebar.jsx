@@ -1,10 +1,8 @@
 import React from 'react';
 import './Sitebar.css';
 import { NavLink } from 'react-router-dom';
-import ImportantFriendsItem from './ImportantFriendsItem/ImportantFriendsItem';
 
 const Sitebar = (props) => {
-    let importantFriendsDataList = props.state.importantFriendsData.map(i => <ImportantFriendsItem name={i.name}/>);
     return (
         <aside className="sitebar">
             <nav className="menu">
@@ -24,12 +22,6 @@ const Sitebar = (props) => {
                     
                     <li className="menu__item">
                         <a href="#" className="menu__link">Настройки</a>
-                    </li>
-                    <li className="menu__item">
-                        <NavLink to="/music" className="menu__link">ДРУЗЬЯ</NavLink>
-                        <div className="important_friends">
-                            {importantFriendsDataList}
-                        </div>
                     </li>
                 </ul>
             </nav>

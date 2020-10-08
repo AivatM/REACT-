@@ -1,5 +1,5 @@
 import React from 'react'; //Чтобы заработал JSX
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Sitebar from './components/Sitebar/Sitebar';
@@ -12,20 +12,18 @@ import Music from './components/Music/Music';
 
 const App = (props) => {
   return (
-    <BrowserRouter>
-      <div className="app-wrapper">
-        <Header />
-        <div className="container">
-          <div className="flex">
-            <Sitebar/>  
-            <Route path="/profile" render={() => <Profile/>}/>
-            <Route path="/dialogs" render={() => <DialogsContainer/>} />
-            <Route path="/news" render={() => <News/>} />
-            <Route path="/music" render={() => <Music/>} />
-          </div>
+    <div className="app-wrapper">
+      <Header />
+      <div className="container">
+        <div className="flex">
+          <Sitebar />
+          <Route path="/profile" render={() => <Profile />} />
+          <Route path="/dialogs" render={() => <DialogsContainer />} />
+          <Route path="/news" render={() => <News />} />
+          <Route path="/music" render={() => <Music />} />
         </div>
-        </div>
-    </BrowserRouter>
+      </div>
+    </div>
   );
 }
 export default App;

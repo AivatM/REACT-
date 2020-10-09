@@ -4,7 +4,6 @@ import DialogsMessagesItem from './DialogsMessagesItem/DialogsMessagesItem';
 import DialogsPeopleItem from './DialogsPeopleItem/DialogsPeopleItem';
 
 const Dialogs = (props) => {
-    debugger;
     let state = props.dialogsPage;
     let dialogsPeopleDataList = state.dialogsPeopleData.map(people => <DialogsPeopleItem name={people.name} id={people.id} />);
     let dialogsMessagesDataList = state.dialogsMessagesData.map(message => <DialogsMessagesItem message={message.message} />);

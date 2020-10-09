@@ -3,7 +3,6 @@ import './MyPosts.css';
 import PostsItem from './PostsItem/PostsItem';
 
 const MyPosts = (props) => {
-    debugger;
     let postsDataList = props.postsData.map(messageAndLikes => <PostsItem message={messageAndLikes.message} likeCount={messageAndLikes.likeCount}/>)
     let newPostElement = React.createRef();
     let addPost = () => {

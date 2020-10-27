@@ -14,6 +14,9 @@ const Sitebar = (props) => {
                         <NavLink to="/dialogs" className="menu__link">Сообщения</NavLink>
                     </li>
                     <li className="menu__item">
+                        <NavLink to="/users" className="menu__link">Пользователи</NavLink>
+                    </li>
+                    <li className="menu__item">
                         <NavLink to="/news" className="menu__link">Новости</NavLink>
                     </li>
                     <li className="menu__item">

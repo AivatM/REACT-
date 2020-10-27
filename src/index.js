@@ -1,7 +1,7 @@
 import './index.css';
 import store from './redux/redux-store';
 import * as serviceWorker from './serviceWorker';
-import React from 'react'; //Чтобы заработал JSX
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';

@@ -1,12 +1,13 @@
 import React from 'react';
 import './UsersItem.css';
+import profilePhoto from '../../../images/profilePhoto.jpg'
 
 const UsersItem = (props) => {
     debugger;
     return (
         <div className="users__item user">
             <div className="user__block_1">
-                <img src={props.photoUrl} alt="profilePhoto" className="user__img" />
+                <img src={props.photoUrl ? props.photoUrl : profilePhoto} alt="profilePhoto" className="user__img" />
                 {props.followed ? <button onClick={() => {props.unFollow(props.id)}}>отписаться</button> : <button onClick={() => {props.follow(props.id)}}>подписаться</button>}
             </div>
             <div className="user__block_2">

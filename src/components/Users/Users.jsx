@@ -1,24 +1,24 @@
 import React from 'react';
 import './Users.css';
 import UsersItem from './UsersItem/UsersItem';
+import * as axios from 'axios';
 
 const Users = (props) => {
     if(props.users.length === 0) {
-        props.setUsers(
-            [
-            {id: 1, photoUrl: 'https://tiktok-wiki.ru/wp-content/uploads/2020/05/avatarki-dlya-tik-toka1.jpg', followed: false, fullName: 'Oleg', status: 'I am boss', location: {city: 'Minsk', country: 'Belarus'}},
-            {id: 2, photoUrl: 'https://tiktok-wiki.ru/wp-content/uploads/2020/05/avatarki-dlya-tik-toka1.jpg', followed: true, fullName: 'Aivat', status: 'I am boss too', location: {city: 'Aktobe', country: 'Kazakhstan'}},
-            {id: 3, photoUrl: 'https://tiktok-wiki.ru/wp-content/uploads/2020/05/avatarki-dlya-tik-toka1.jpg', followed: false, fullName: 'Olya', status: 'I am girl', location: {city: 'Moscow', country: 'Russia'}},
-            ]
-        )
+        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+            debugger;
+            props.setUsers(response.data.items);
+        }); 
     }
+  
+    
     
 
 
     let usersElements = props.users.map(u => 
-    <UsersItem id={u.id} photoUrl={u.photoUrl} followed={u.followed}
-    name={u.fullName} status={u.status} 
-    country={u.location.country} city={u.location.city}
+    <UsersItem id={u.id} photoUrl={u.photos.small} followed={u.followed}
+    name={u.name} status={u.status} 
+    country={'u.location.country'} city={'u.location.city'}
     follow={props.follow}
     unFollow={props.unFollow} />);
    

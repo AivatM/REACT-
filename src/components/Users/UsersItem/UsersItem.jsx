@@ -3,7 +3,6 @@ import './UsersItem.css';
 import profilePhoto from '../../../images/profilePhoto.jpg'
 
 const UsersItem = (props) => {
-    debugger;
     return (
         <div className="users__item user">
             <div className="user__block_1">

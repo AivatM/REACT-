@@ -41,8 +41,28 @@
     margin-bottom: 20px;
 }
 
+.card__about {}
+
+.card__job_search {
+    display: flex;
+    align-items: center;
+}
+.card__job_search_img {
+    margin-left: 10px;
+}
 .card__city {}
 
 .card__education {}
 
-.card__web {}
+.card__socials {
+    margin-top: 20px;
+}
+
+.socials__link {
+    display: inline-block;
+    margin-right: 8px;
+}
+.socials__img {
+    width: 40px;
+    height: 40px;
+}

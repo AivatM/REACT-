@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProfileInfo.css';
 import profileBg from '../../../images/profileBg.jpg';
-import profilePhoto from '../../../images/profilePhoto.jpg';
+import profilePhoto from '../../../images/noPhoto.png';
 import Preloader from '../../common/Preloader/Preloader';
 import facebook from '../../../images/profile/socials/facebook.png';
 import website from '../../../images/profile/socials/website.png';

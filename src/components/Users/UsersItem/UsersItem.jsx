@@ -1,6 +1,6 @@
 import React from 'react';
 import './UsersItem.css';
-import profilePhoto from '../../../images/profilePhoto.jpg'
+import profilePhoto from '../../../images/noPhoto.png'
 import { NavLink } from 'react-router-dom';
 
 const UsersItem = (props) => {

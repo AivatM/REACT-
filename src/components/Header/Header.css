@@ -3,6 +3,11 @@
     padding: 10px 15px;
 }
 
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .header__logo-link {
     display: block;
 }
@@ -11,4 +16,13 @@
     width: 40px;
     height: 40px;
     display: block;
+}
+.login__name{
+    color: #fff;
+}
+.header__login{} 
+.login{}
+.login__link{
+    text-decoration: none;
+    color: #fff;
 }

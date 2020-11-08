@@ -10,18 +10,22 @@ const UsersItem = (props) => {
             <div className="user__block_1">
                 <NavLink to={'/profile/' + props.id}><img src={props.photoUrl ? props.photoUrl : profilePhoto} alt="profilePhoto" className="user__img" /></NavLink>
                 {props.followed
-                    ? <button onClick={() => {
+                    ? <button disabled={props.followingInProgress.some(id=>id === props.id)} onClick={() => {
+                        props.toogleFollowingProgress(true, props.id);
                         unfollowAPI.unfollow(props.id).then(data => {
                             if (data.resultCode == 0) {
                                 props.unFollow(props.id)
                             }
+                            props.toogleFollowingProgress(false, props.id);
                         });
                     }}>отписаться</button>
-                    : <button onClick={() => {
+                    : <button disabled={props.followingInProgress.some(id=>id === props.id)} onClick={() => {
+                        props.toogleFollowingProgress(true, props.id);
                         followAPI.follow(props.id).then(data => {
                             if (data.resultCode == 0) {
                                 props.follow(props.id)
                             }
+                            props.toogleFollowingProgress(false,props.id);
                         });
                     }}>подписаться</button>}
             </div>

@@ -24,7 +24,9 @@ const Users = (props) => {
                         name={u.name} status={u.status}
                         country={'u.location.country'} city={'u.location.city'}
                         follow={props.follow}
-                        unFollow={props.unFollow} />)}
+                        unFollow={props.unFollow} 
+                        toogleFollowingProgress={props.toogleFollowingProgress}
+                        followingInProgress={props.followingInProgress}/>)}
             </div>
         </section>
 

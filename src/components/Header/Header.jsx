@@ -4,7 +4,6 @@ import logo from "../../images/logo.png"; //Подключил логотип
 import { NavLink } from "react-router-dom";
 
 const Header = (props) => {
-  debugger;
   return (
     <header className="header">
       <div className="container">

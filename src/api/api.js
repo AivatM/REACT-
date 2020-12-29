@@ -17,21 +17,22 @@ export const userAPI = {
       });
   },
   follow(id) {
-    return instance.post(`follow/${id}`).then((response) => {
-      return response.data;
-    });
+    return instance.post(`follow/${id}`);
   },
   unfollow(id) {
-    return instance.delete(`/follow/${id}`).then((response) => {
-      return response.data;
-    });
+    return instance.delete(`follow/${id}`);
+  },
+  getProfile(userId) {
+    return instance.get(`profile/${userId}`);
   },
 };
 
 export const authAPI = {
-  getAuthApi() {
-    return instance.get(`auth/me`).then((response) => {
+  me() {
+    return instance.get(
+      `auth/me`
+    ); /* .then((response) => {
       return response.data;
-    });
+    }); */
   },
 };

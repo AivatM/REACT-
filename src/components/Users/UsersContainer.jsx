@@ -8,6 +8,8 @@ import {
 } from "../../redux/users-reducer";
 import Users from "./Users";
 import Preloader from "../common/Preloader/Preloader";
+import { compose } from "redux";
+import { widthAuthRedirect } from "../../hoc/withAuthRedirect";
 
 class UsersAPIComponent extends React.Component {
   componentDidMount() {
@@ -48,11 +50,11 @@ let mapStateToProps = (state) => {
   };
 };
 
-const UsersContainer = connect(mapStateToProps, {
-  setCurrentPage,
-  getUsers,
-  follow,
-  unfollow,
-})(UsersAPIComponent);
-
-export default UsersContainer;
+export default compose(
+  connect(mapStateToProps, {
+    setCurrentPage,
+    getUsers,
+    follow,
+    unfollow,
+  })
+)(UsersAPIComponent);

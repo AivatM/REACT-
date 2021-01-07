@@ -40,7 +40,10 @@ const ProfileInfo = (props) => {
         </picture>
         <div className="card__text">
           <div className="card__name">{props.profile.fullName}</div>
-          <ProfileStatus status={"ddd"} />
+          <ProfileStatus
+            status={props.status}
+            updateStatus={props.updateStatus}
+          />
           <div className="card__about">
             <b>Обо мне:</b> {props.profile.aboutMe}
           </div>

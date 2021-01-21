@@ -1,0 +1,13 @@
+.profile-status {
+  background-color: #485992;
+  border: 1px solid #485992;
+  margin-bottom: 20px;
+}
+.profile-status__header {
+  color: #fff;
+}
+.profile-status__presetation {
+  background-color: #fff;
+}
+.profile-status__change {
+}

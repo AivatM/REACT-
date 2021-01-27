@@ -1,0 +1,21 @@
+.login {
+}
+.login__header {
+}
+.form__body {
+  display: flex;
+  flex-direction: column;
+}
+.form__btn {
+  background-color: #485992;
+  color: #fff;
+  border: none;
+  margin-top: 10px;
+}
+.form__input {
+  margin-bottom: 5px;
+}
+
+.form__input:last-child {
+  margin-bottom: 0;
+}
